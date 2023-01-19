@@ -31,10 +31,11 @@ function fetchTwo() {
         console.log(data.data)
         console.log(data.data[0].url)
         document.querySelector('img').src = data.data[0].url
+        // document.getElementById('two').src = data.data[1].url
       })
-    //   .catch(err => {
-    //     console.log(`error ${err}`)
-    //   })
+    .catch(err => {
+     console.log(`error ${err}`)
+    })
     //   .then(r =>  r.json().then(data => ({status: r.status, body: data})))
     //   .then(rat => {console.log(rat);
     //      userOut = rat;
@@ -54,7 +55,7 @@ function fetchTwo() {
 
 //     curl https://api.openai.com/v1/images/generations \
 //     -H 'Content-Type: application/json' \
-//     -H 'Authorization: Bearer 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' \
+//    
 //     -d '{
 //     "prompt": "A cute baby sea otter",
 //     "n": 2,
